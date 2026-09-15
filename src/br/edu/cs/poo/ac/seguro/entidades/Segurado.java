@@ -45,12 +45,10 @@ public class Segurado {
         return bonus;
     }
 
-    public int getIdade(LocalDate dataCriacao, LocalDate dataHoje){
-        dataCriacao = getDataCriacao();
-        dataHoje = LocalDate.now();
-
+    public int getIdade(){
+        LocalDate dataCriacao = getDataCriacao();
+        LocalDate dataHoje = LocalDate.now();
         Period periodo = Period.between(dataCriacao, dataHoje);
-
         return periodo.getYears();
     }
 
