@@ -20,9 +20,8 @@ public class TesteSinistroDAO extends TesteDAO {
 
     private Sinistro criarSinistro(String numero, String usuario, BigDecimal valor, TipoSinistro tipo) {
         Veiculo veiculo = new Veiculo("ABC1234", 2020, null, null, CategoriaVeiculo.BASICO);
-        Sinistro sinistro = new Sinistro(veiculo, LocalDateTime.now(), LocalDateTime.now(),
+        Sinistro sinistro = new Sinistro(numero, veiculo, LocalDateTime.now(), LocalDateTime.now(),
                 usuario, valor, tipo);
-        sinistro.setNumero(numero);
         return sinistro;
     }
 
